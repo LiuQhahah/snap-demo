@@ -1,0 +1,14 @@
+apiVersion: batch.crd.liuqhahah.com/v1
+kind: SnapshotSchedule
+metadata:
+  labels:
+    app.kubernetes.io/name: snapshotschedule
+    app.kubernetes.io/instance: snapshotschedule-sample
+    app.kubernetes.io/part-of: snap-demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: snap-demo
+  name: snapshotschedule-sample
+spec:
+  retention:
+    maxCount: 1
+  schedule: "0 * * * *"
