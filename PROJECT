@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: snap-demo
 repo: crd.liuqhahah.com/custom-snap
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: crd.liuqhahah.com
+  group: batch
+  kind: SnapshotSchedule
+  path: crd.liuqhahah.com/custom-snap/api/v1
+  version: v1
 version: "3"
